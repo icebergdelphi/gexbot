@@ -17,7 +17,7 @@ html_code = """
       overflow: hidden; /* Evita barras de desplazamiento */
     }
     .iframe-container {
-      width: 110vw; /* Ocupa todo el ancho del viewport */
+      width: 102vw; /* Ocupa todo el ancho del viewport */
       margin: 0;
       padding: 0;
     }
