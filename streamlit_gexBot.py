@@ -1,9 +1,6 @@
 import streamlit as st
 from streamlit.components.v1 import html
 
-# Título de la aplicación
-st.title("GexBot Embed en Streamlit")
-
 # HTML personalizado con el iframe ajustado
 html_code = """
 <!DOCTYPE html>
