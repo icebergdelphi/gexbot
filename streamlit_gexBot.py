@@ -1,9 +1,15 @@
 import streamlit as st
 from streamlit.components.v1 import html
-# Aplicar estilo global para modificar el padding en pantallas grandes
+# Aplicar estilo global para modificar el layout de Streamlit
 st.markdown(
     """
     <style>
+    .st-emotion-cache-zy6yx3 {
+        width: 100%;
+        padding: 3rem 1rem 10rem;
+        max-width: initial;
+        min-width: auto;
+    }
     @media (min-width: calc(736px + 8rem)) {
         .st-emotion-cache-zy6yx3 {
             padding-left: 1rem;
