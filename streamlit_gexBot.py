@@ -1,6 +1,19 @@
 import streamlit as st
 from streamlit.components.v1 import html
-
+# Aplicar estilo global para modificar el padding en pantallas grandes
+st.markdown(
+    """
+    <style>
+    @media (min-width: calc(736px + 8rem)) {
+        .st-emotion-cache-zy6yx3 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # HTML personalizado con el iframe ajustado
 html_code = """
 <!DOCTYPE html>
