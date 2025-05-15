@@ -23,7 +23,7 @@ html_code = """
     }
     iframe {
       width: 100vw; /* Ocupa todo el ancho del viewport */
-      height: 115vh; /* Ocupa todo el alto del viewport */
+      height: 120vh; /* Ocupa todo el alto del viewport */
       border: none; /* Elimina el borde */
       display: block; /* Asegura que no haya espacios extra */
     }
