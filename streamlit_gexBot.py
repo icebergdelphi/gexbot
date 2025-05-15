@@ -1,5 +1,10 @@
 import streamlit as st
 from streamlit.components.v1 import html
+
+st.set_page_config( 
+   page_icon="🧊",
+   layout="wide", 
+)
 # Aplicar estilo global para modificar el layout de Streamlit
 st.markdown(
     """
