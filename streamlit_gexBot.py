@@ -4,7 +4,7 @@ from streamlit.components.v1 import html
 # Título de la aplicación
 st.title("GexBot Embed en Streamlit")
 
-# HTML personalizado con el iframe
+# HTML personalizado con el iframe ajustado
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
@@ -17,34 +17,32 @@ html_code = """
     body {
       margin: 0;
       padding: 0;
+      overflow: hidden; /* Evita barras de desplazamiento */
     }
     .iframe-container {
-      width: 100%;
-      max-width: 2000px;
-      margin: 0 auto;
+      width: 100vw; /* Ocupa todo el ancho del viewport */
+      margin: 0;
+      padding: 0;
     }
     iframe {
-      width: 100%;
-      height: 90vh;
-      border: 2px solid black;
+      width: 100vw; /* Ocupa todo el ancho del viewport */
+      height: 100vh; /* Ocupa todo el alto del viewport */
+      border: none; /* Elimina el borde */
+      display: block; /* Asegura que no haya espacios extra */
     }
   </style>
 </head>
 <body>
-  <div class="container-fluid">
-    <br>
-    <br>
-    <div class="iframe-container">
-      <iframe 
-        src="https://www.gexbot.com/"
-        title="Contenido externo"
-        allowfullscreen
-      ></iframe>
-    </div>
+  <div class="iframe-container">
+    <iframe 
+      src="https://www.gexbot.com/"
+      title="Contenido externo"
+      allowfullscreen
+    ></iframe>
   </div>
 </body>
 </html>
 """
 
 # Renderizar el HTML en Streamlit
-html(html_code, height=900)
+html(html_code, height=1100)
