@@ -106,7 +106,8 @@ html_code = """
 <body>
   <div class="iframe-container">
     <iframe 
-      src="https://www.gexbot.com/"      
+      src="https://www.gexbot.com/"    
+          allowfullscreen
     ></iframe>
   </div>
   <script>
@@ -127,4 +128,4 @@ html_code = """
 
 # Renderizar el HTML en Streamlit - usar un valor que se ajuste a la mayoría de pantallas
 # Podemos ajustar este valor según las necesidades específicas
-html(html_code, height=800, scrolling=False)
+html(html_code, height=750, scrolling=False)
