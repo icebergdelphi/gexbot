@@ -15,12 +15,7 @@ st.markdown(
         max-width: initial;
         min-width: auto;
     }
-    @media (min-width: calc(736px + 8rem)) {
-        .st-emotion-cache-zy6yx3 {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-    }
+   
     </style>
     """,
     unsafe_allow_html=True
