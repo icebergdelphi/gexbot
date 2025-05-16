@@ -77,7 +77,8 @@ html_code = """
       padding: 0;
     }
     iframe {
-      width: 100vw; /* Ocupa todo el ancho del viewport */     
+      width: 100vw; /* Ocupa todo el ancho del viewport */  
+      height: 100vh; /* Ocupa todo el alto del viewport */
       border: none; /* Elimina el borde */
       display: block; /* Asegura que no haya espacios extra */
     }
