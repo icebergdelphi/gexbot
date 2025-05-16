@@ -71,10 +71,12 @@ html_code = """
       padding: 0;
       overflow: hidden; /* Evita barras de desplazamiento */
     }
+
+
     
     iframe {
       width: 100vw; /* Ocupa todo el ancho del viewport */  
-      height: 100vh; /* Ocupa todo el alto del viewport */
+      height: 90vh; /* Ocupa todo el alto del viewport */
       border: none; /* Elimina el borde */
       display: block; /* Asegura que no haya espacios extra */
     }
