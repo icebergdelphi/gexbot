@@ -64,82 +64,96 @@ html_code = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GexBot Embed</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       overflow: hidden;
       width: 100%;
-      height: 100%;
+      height: 100vh;
+      background-color: #000;
     }
     
-    .iframe-container {
-      position: absolute;
+    .iframe-wrapper {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      transform-origin: top left;
-      transition: transform 0.3s ease;
+      height: 100vh;
+      overflow: hidden;
     }
     
     iframe {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 130vh; /* Altura extra para mostrar todo el contenido */
       border: none;
-      display: block;
+      transform-origin: top center;
+      transform: scale(1);
+    }
+    
+    @media screen and (max-width: 1366px) {
+      /* Pantallas pequeñas (laptops de 14") */
+      iframe {
+        height: 150vh;
+        transform: scale(0.8);
+      }
+    }
+    
+    @media screen and (min-width: 1921px) {
+      /* Pantallas muy grandes (21" o más) */
+      iframe {
+        height: 105vh;
+        transform: scale(0.95);
+      }
     }
   </style>
 </head>
 <body>
-  <div id="iframe-container" class="iframe-container">
+  <div class="iframe-wrapper">
     <iframe 
       src="https://www.gexbot.com/"
       allowfullscreen
+      id="gexbot-frame"
     ></iframe>
   </div>
   
   <script>
-    // Función para ajustar la escala según el tamaño de la pantalla
-    function adjustScale() {
-      const container = document.getElementById('iframe-container');
+    // Función para ajustar manualmente el iframe según el tamaño de pantalla detectado
+    function adjustIframe() {
+      const iframe = document.getElementById('gexbot-frame');
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
       
-      // Detectar tamaño de pantalla y aplicar escala adecuada
-      let scale = 1; // Escala predeterminada (100%)
-      
-      // Para pantallas pequeñas (14 pulgadas o similar)
+      // Ajustamos la altura y escala según el ancho de pantalla
       if (screenWidth <= 1366) {
-        scale = 0.75; // Escala al 75%
+        // Pantallas pequeñas (14")
+        iframe.style.height = "170vh";
+        iframe.style.transform = "scale(0.75)";
       } 
-      // Para pantallas medianas (15-17 pulgadas)
       else if (screenWidth > 1366 && screenWidth <= 1920) {
-        scale = 0.9; // Escala al 90%
+        // Pantallas medianas
+        iframe.style.height = "130vh";
+        iframe.style.transform = "scale(0.9)";
       }
-      // Para pantallas grandes (21 pulgadas o más)
       else if (screenWidth > 1920) {
-        scale = 1.2; // Escala al 120%
+        // Pantallas grandes (21"+)
+        iframe.style.height = "110vh";
+        iframe.style.transform = "scale(1.1)";
       }
       
-      // Aplicar transformación de escala al contenedor
-      container.style.transform = `scale(${scale})`;
-      
-      // Ajustar el contenedor para ocupar el espacio correcto después del escalado
-      container.style.width = `${100 / scale}%`;
-      container.style.height = `${100 / scale}%`;
-      
-      console.log(`Pantalla detectada: ${screenWidth}px de ancho. Aplicando escala: ${scale * 100}%`);
+      console.log(`Pantalla: ${screenWidth}x${screenHeight}px - Ajustando iframe`);
     }
     
-    // Ejecutar al cargar y cuando cambie el tamaño de la ventana
-    window.addEventListener('load', adjustScale);
-    window.addEventListener('resize', adjustScale);
+    // Ejecutar al cargar y cuando cambie el tamaño
+    window.addEventListener('load', adjustIframe);
+    window.addEventListener('resize', adjustIframe);
+    
+    // También podemos intentar ajustar periódicamente para asegurar la correcta visualización
+    setInterval(adjustIframe, 2000);
   </script>
 </body>
 </html>
 """
 
-# Renderizar el HTML en Streamlit con altura flexible
-html(html_code, height=800, scrolling=False)
+# Renderizar el HTML en Streamlit - altura fija más alta para acomodar todo el contenido
+html(html_code, height=1000, scrolling=False)
