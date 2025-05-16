@@ -12,29 +12,31 @@ st.set_page_config(
    page_icon="🧊",
    layout="wide", 
 )
-# Aplicar estilo global para modificar el layout de Streamlit
-hide_streamlit_style = """
-            <style>
-                /* Hide the Streamlit header and menu */
-                header {visibility: hidden;}
-                /* Optionally, hide the footer */
-                .streamlit-footer {display: none;}
-                /* Hide your specific div class, replace class name with the one you identified */
-                .st-emotion-cache-uf99v8 {display: none;},
-                
-            </style>
-
-            <style>
+# Combinando todos los estilos en un solo bloque
+combined_style = """
+<style>
+    /* Hide the Streamlit header and menu */
+    header {visibility: hidden;}
+    
+    /* Optionally, hide the footer */
+    .streamlit-footer {display: none;}
+    
+    /* Hide your specific div class */
+    .st-emotion-cache-uf99v8 {display: none;}
+    
+    /* Full width content */
     .st-emotion-cache-zy6yx3 {
         width: 100%;
         padding: 3rem 1rem 10rem;
         max-width: initial;
         min-width: auto;
     }
- </style>
-            """
+</style>
+"""
 
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# Aplicar el estilo combinado
+st.markdown(combined_style, unsafe_allow_html=True)
+
 # HTML personalizado con el iframe ajustado
 html_code = """
 <!DOCTYPE html>
