@@ -128,4 +128,4 @@ html_code = """
 
 # Renderizar el HTML en Streamlit - usar un valor que se ajuste a la mayoría de pantallas
 # Podemos ajustar este valor según las necesidades específicas
-html(html_code, height=750, scrolling=False)
+html(html_code, height=760, scrolling=False)
