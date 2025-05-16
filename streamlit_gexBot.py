@@ -102,4 +102,4 @@ html_code = """
 """
 
 # Renderizar el HTML en Streamlit
-html(html_code, height=auto)
+html(html_code, height=900)
