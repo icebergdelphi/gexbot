@@ -25,11 +25,36 @@ combined_style = """
         max-width: initial;
         min-width: auto;
     }
+    
+    /* Media query para la primera medida de pantalla */
+    @media (min-width: calc(736px + 8rem)) {
+        .st-emotion-cache-zy6yx3 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    
+    /* Media query para pantallas de 14 pulgadas (aproximadamente 1366px) */
+    @media (min-width: 1366px) and (max-width: 1599px) {
+        .st-emotion-cache-zy6yx3 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    
+    /* Media query para pantallas de 15 pulgadas (aproximadamente 1600px-1920px) */
+    @media (min-width: 1600px) and (max-width: 1920px) {
+        .st-emotion-cache-zy6yx3 {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
 </style>
 """
 
 # Aplicar el estilo combinado
 st.markdown(combined_style, unsafe_allow_html=True)
+
 
 # HTML personalizado con el iframe ajustado
 html_code = """
