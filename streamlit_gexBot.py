@@ -22,7 +22,7 @@ combined_style = """
     /* Full width content */
     .st-emotion-cache-zy6yx3 {
         width: 100%;
-        padding: 3rem 1rem 10rem;
+        padding: 0rem 1rem 0rem;
         max-width: initial;
         min-width: auto;
     }
