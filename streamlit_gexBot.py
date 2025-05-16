@@ -106,8 +106,7 @@ html_code = """
 <body>
   <div class="iframe-container">
     <iframe 
-      src="https://www.gexbot.com/"
-      title="Contenido externo"
+      src="https://www.gexbot.com/"     
       allowfullscreen
     ></iframe>
   </div>
