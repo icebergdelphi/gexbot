@@ -73,7 +73,7 @@ html_code = """
       height: 100%;
     }
     .iframe-container {
-      width: 110vw; /* Ocupa todo el ancho del viewport */
+      width: 105vw; /* Ocupa todo el ancho del viewport */
       margin: 0;
       padding: 0;
       height: 100%;
@@ -129,4 +129,4 @@ html_code = """
 
 # Renderizar el HTML en Streamlit - usar un valor que se ajuste a la mayoría de pantallas
 # Podemos ajustar este valor según las necesidades específicas
-html(html_code, height=800, scrolling=False)
+html(html_code, height=700, scrolling=False)
