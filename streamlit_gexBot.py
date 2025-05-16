@@ -16,8 +16,18 @@ hide_streamlit_style = """
                 .st-emotion-cache-uf99v8 {display: none;}
             </style>
             """
+more_wide="""
+ <style>
+    .st-emotion-cache-zy6yx3 {
+        width: 100%;
+        padding: 3rem 1rem 10rem;
+        max-width: initial;
+        min-width: auto;
+    }
+ </style>
 
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+"""
+st.markdown(hide_streamlit_style,more_wide, unsafe_allow_html=True)
 # HTML personalizado con el iframe ajustado
 html_code = """
 <!DOCTYPE html>
