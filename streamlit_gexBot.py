@@ -80,20 +80,20 @@ html_code = """
     }
     iframe {
       width: 100vw; /* Ocupa todo el ancho del viewport */  
-      height: 90vh; /* Ocupa todo el alto del viewport */
+      height: 100vh; /* Ocupa todo el alto del viewport */
       border: none; /* Elimina el borde */
       display: block; /* Asegura que no haya espacios extra */
     }
   </style>
 </head>
 <body>
-  <div class="iframe-container">
+ 
     <iframe 
       src="https://www.gexbot.com/"
       title="Contenido externo"
       allowfullscreen
     ></iframe>
-  </div>
+
 </body>
 </html>
 """
