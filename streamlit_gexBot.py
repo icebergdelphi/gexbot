@@ -1,24 +1,22 @@
-import streamlit as st
+ import streamlit as st
 from streamlit.components.v1 import html
-
 # IMPORTANTE: st.set_page_config debe ser el primer comando de Streamlit
 st.set_page_config( 
    page_icon="🧊",
    layout="wide", 
 )
-
 # Combinando todos los estilos en un solo bloque
 combined_style = """
 <style>
     /* Hide the Streamlit header and menu */
     header {visibility: hidden;}
-    
+
     /* Optionally, hide the footer */
     .streamlit-footer {display: none;}
-    
+
     /* Hide your specific div class */
     .st-emotion-cache-uf99v8 {display: none;}
-    
+
     /* Full width content */
     .st-emotion-cache-zy6yx3 {
         width: 100%;
@@ -26,7 +24,7 @@ combined_style = """
         max-width: initial;
         min-width: auto;
     }
-    
+
     /* Media query para la primera medida de pantalla */
     @media (min-width: calc(736px + 8rem)) {
         .st-emotion-cache-zy6yx3 {
@@ -34,7 +32,7 @@ combined_style = """
             padding-right: 1rem;
         }
     }
-    
+
     /* Media query para pantallas de 14 pulgadas (aproximadamente 1366px) */
     @media (min-width: 1366px) and (max-width: 1599px) {
         .st-emotion-cache-zy6yx3 {
@@ -42,8 +40,8 @@ combined_style = """
             padding-right: 2rem;
         }
     }
-    
-    /* Media query para pantallas de 15 pulgadas (aproximadamente 1600px-1920px) */
+
+    /* Media query para pantallas de 15 pulgadas (aproximadamente 1600px-1920px) /
     @media (min-width: 1600px) and (max-width: 1920px) {
         .st-emotion-cache-zy6yx3 {
             padding-left: 3rem;
@@ -52,11 +50,9 @@ combined_style = """
     }
 </style>
 """
-
 # Aplicar el estilo combinado
 st.markdown(combined_style, unsafe_allow_html=True)
-
-# HTML personalizado con el iframe ajustado y escala auto-adaptativa
+# HTML personalizado con el iframe ajustado
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
@@ -64,96 +60,67 @@ html_code = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GexBot Embed</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
-      width: 100%;
-      height: 100vh;
-      background-color: #000;
+      overflow: hidden; / Evita barras de desplazamiento /
+      height: 100%;
     }
-    
-    .iframe-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
+    .iframe-container {
+      width: 105vw; / Ocupa todo el ancho del viewport /
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
-    
     iframe {
-      width: 100%;
-      height: 130vh; /* Altura extra para mostrar todo el contenido */
-      border: none;
-      transform-origin: top center;
-      transform: scale(1);
+      width: 100vw; / Ocupa todo el ancho del viewport /
+      height: 100vh; / Altura dinámicamente ajustada al viewport /
+      border: none; / Elimina el borde /
+      display: block; / Asegura que no haya espacios extra */
     }
-    
-    @media screen and (max-width: 1366px) {
-      /* Pantallas pequeñas (laptops de 14") */
+
+    /* Ajustes responsivos para diferentes tamaños de pantalla /
+    @media (max-height: 768px) {
       iframe {
-        height: 150vh;
-        transform: scale(0.8);
+        height: 100vh; / Para pantallas pequeñas /
       }
     }
-    
-    @media screen and (min-width: 1921px) {
-      /* Pantallas muy grandes (21" o más) */
+    @media (min-height: 769px) and (max-height: 900px) {
       iframe {
-        height: 105vh;
-        transform: scale(0.95);
+        height: 90vh; / Para pantallas medianas /
+      }
+    }
+    @media (min-height: 901px) {
+      iframe {
+        height: 95vh; / Para pantallas grandes */
       }
     }
   </style>
 </head>
 <body>
-  <div class="iframe-wrapper">
+  <div class="iframe-container">
     <iframe 
-      src="https://www.gexbot.com/"
-      allowfullscreen
-      id="gexbot-frame"
+      src="https://www.gexbot.com/"    
+          allowfullscreen
     ></iframe>
   </div>
-  
   <script>
-    // Función para ajustar manualmente el iframe según el tamaño de pantalla detectado
-    function adjustIframe() {
-      const iframe = document.getElementById('gexbot-frame');
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
-      
-      // Ajustamos la altura y escala según el ancho de pantalla
-      if (screenWidth <= 1366) {
-        // Pantallas pequeñas (14")
-        iframe.style.height = "170vh";
-        iframe.style.transform = "scale(0.75)";
-      } 
-      else if (screenWidth > 1366 && screenWidth <= 1920) {
-        // Pantallas medianas
-        iframe.style.height = "130vh";
-        iframe.style.transform = "scale(0.9)";
-      }
-      else if (screenWidth > 1920) {
-        // Pantallas grandes (21"+)
-        iframe.style.height = "110vh";
-        iframe.style.transform = "scale(1.1)";
-      }
-      
-      console.log(`Pantalla: ${screenWidth}x${screenHeight}px - Ajustando iframe`);
+    // Script para ajustar dinámicamente la altura del iframe
+    function adjustIframeHeight() {
+      const iframe = document.querySelector('iframe');
+      const viewportHeight = window.innerHeight;
+      iframe.style.height = viewportHeight + 'px';
     }
-    
-    // Ejecutar al cargar y cuando cambie el tamaño
-    window.addEventListener('load', adjustIframe);
-    window.addEventListener('resize', adjustIframe);
-    
-    // También podemos intentar ajustar periódicamente para asegurar la correcta visualización
-    setInterval(adjustIframe, 2000);
+
+    // Ajustar al cargar y cuando cambie el tamaño de la ventana
+    window.addEventListener('load', adjustIframeHeight);
+    window.addEventListener('resize', adjustIframeHeight);
   </script>
 </body>
 </html>
 """
-
-# Renderizar el HTML en Streamlit - altura fija más alta para acomodar todo el contenido
-html(html_code, height=1000, scrolling=False)
+# Renderizar el HTML en Streamlit - usar un valor que se ajuste a la mayoría de pantallas
+# Podemos ajustar este valor según las necesidades específicas
+html(html_code, height=760, scrolling=False)
