@@ -14,13 +14,17 @@ hide_streamlit_style = """
                 .streamlit-footer {display: none;}
                 /* Hide your specific div class, replace class name with the one you identified */
                 .st-emotion-cache-uf99v8 {display: none;},
-                 .st-emotion-cache-zy6yx3 {
+                
+            </style>
+
+            <style>
+    .st-emotion-cache-zy6yx3 {
         width: 100%;
         padding: 3rem 1rem 10rem;
         max-width: initial;
         min-width: auto;
     }
-            </style>
+ </style>
             """
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
