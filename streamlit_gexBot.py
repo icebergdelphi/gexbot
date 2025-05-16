@@ -14,10 +14,19 @@ st.markdown(
         padding: 3rem 1rem 10rem;
         max-width: initial;
         min-width: auto;
-    }
+    },
+     <style>
+                /* Hide the Streamlit header and menu */
+                header {visibility: hidden;}
+                /* Optionally, hide the footer */
+                .streamlit-footer {display: none;}
+                /* Hide your specific div class, replace class name with the one you identified */
+                .st-emotion-cache-uf99v8 {display: none;}
+            </style>
    
     </style>
     """,
+   
     unsafe_allow_html=True
 )
 # HTML personalizado con el iframe ajustado
