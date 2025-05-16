@@ -21,7 +21,7 @@ combined_style = """
     /* Full width content */
     .st-emotion-cache-zy6yx3 {
         width: 100%;
-        padding: 3rem 1rem 10rem;
+        padding: 1rem 1rem 1rem;
         max-width: initial;
         min-width: auto;
     }
@@ -37,8 +37,8 @@ combined_style = """
     /* Media query para pantallas de 14 pulgadas (aproximadamente 1366px) */
     @media (min-width: 1366px) and (max-width: 1599px) {
         .st-emotion-cache-zy6yx3 {
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     }
     
