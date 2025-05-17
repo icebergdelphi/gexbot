@@ -84,7 +84,7 @@ html_code = """
     /* Ajustes responsivos para diferentes tamaños de pantalla /
     @media (max-height: 768px) {
       iframe {
-        height: 100vh; / Para pantallas pequeñas 100 /
+        height: 300vh; / Para pantallas pequeñas 100 /
       }
     }
     @media (min-height: 769px) and (max-height: 900px) {
