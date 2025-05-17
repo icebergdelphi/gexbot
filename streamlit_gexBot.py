@@ -38,16 +38,16 @@ combined_style = """
     /* Media query para pantallas de 14 pulgadas (aproximadamente 1366px) */
     @media (min-width: 1366px) and (max-width: 1599px) {
         .st-emotion-cache-zy6yx3 {
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     }
     
     /* Media query para pantallas de 15 pulgadas (aproximadamente 1600px-1920px) */
     @media (min-width: 1600px) and (max-width: 1920px) {
         .st-emotion-cache-zy6yx3 {
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     }
 </style>
