@@ -119,7 +119,7 @@ html_code = """
       if (screenWidth <= 1366) {
         // Pantallas pequeñas (14")
         iframe.style.height = "170vh";
-        iframe.style.transform = "scale(0.75)";
+        iframe.style.transform = "scale(1)";
       } 
       else if (screenWidth > 1366 && screenWidth <= 1920) {
         // Pantallas medianas
