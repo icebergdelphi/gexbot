@@ -66,13 +66,13 @@ html_code = """
       margin: 0;
       padding: 0;
       overflow: hidden; / Evita barras de desplazamiento /
-      height: 90%; / 100 /
+      height: 100%; / 100 /
     }
     .iframe-container {
       width: 105vw; / Ocupa todo el ancho del viewport /
       margin: 0;
       padding: 0;
-      height: 90%; / Altura dinámicamente ajustada al viewport 100/
+      height: 70%; / Altura dinámicamente ajustada al viewport 100/
     }
     iframe {
       width: 100vw; / Ocupa todo el ancho del viewport /
