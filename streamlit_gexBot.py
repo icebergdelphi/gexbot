@@ -77,7 +77,7 @@ html_code = """
       position: fixed;
       top: 0;
       left: 0;
-      width: 0vh;
+      width: 100%;
       height: 100vh;
       overflow: hidden;
     }
