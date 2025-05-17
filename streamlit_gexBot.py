@@ -78,7 +78,7 @@ html_code = """
     }
     iframe {
       width: 100vw; / Ocupa todo el ancho del viewport 100 /
-      height: 1vh; / Altura dinámicamente ajustada al viewport 100/
+      height: 760px; / Altura dinámicamente ajustada al viewport 100/
       border: none; / Elimina el borde /
       display: block; / Asegura que no haya espacios extra */
     }
