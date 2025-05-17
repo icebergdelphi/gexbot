@@ -118,12 +118,12 @@ html_code = """
       // Ajustamos la altura y escala según el ancho de pantalla
       if (screenWidth <= 1366) {
         // Pantallas pequeñas (14")
-        iframe.style.height = "170vh";
+        iframe.style.height = "100vh";
         iframe.style.transform = "scale(0.9)";
       } 
       else if (screenWidth > 1366 && screenWidth <= 1920) {
         // Pantallas medianas
-        iframe.style.height = "100vh";
+        iframe.style.height = "130vh";
         iframe.style.transform = "scale(0.9)";
       }
       else if (screenWidth > 1920) {
