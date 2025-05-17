@@ -86,7 +86,7 @@ html_code = """
       /* Pantallas pequeñas (laptops de 14") */
       iframe {
         height: 100vh;
-        transform: scale(0.8);
+        transform: scale(1);
       }
     }
     
