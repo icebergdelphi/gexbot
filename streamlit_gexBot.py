@@ -85,7 +85,7 @@ html_code = """
     @media screen and (max-width: 1366px) {
       /* Pantallas pequeñas (laptops de 14") */
       iframe {
-        height: 150vh;
+        height: 100vh;
         transform: scale(0.8);
       }
     }
