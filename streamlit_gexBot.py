@@ -76,7 +76,7 @@ html_code = """
     }
     iframe {
       width: 100vw; / Ocupa todo el ancho del viewport /
-      height: 100vh; / Altura dinámicamente ajustada al viewport /
+      height: 120vh; / Altura dinámicamente ajustada al viewport 100/
       border: none; / Elimina el borde /
       display: block; / Asegura que no haya espacios extra */
     }
@@ -84,17 +84,17 @@ html_code = """
     /* Ajustes responsivos para diferentes tamaños de pantalla /
     @media (max-height: 768px) {
       iframe {
-        height: 300vh; / Para pantallas pequeñas 100 /
+        height: 100vh; / Para pantallas pequeñas 100 /
       }
     }
     @media (min-height: 769px) and (max-height: 900px) {
       iframe {
-        height: 400vh; / Para pantallas medianas 90/
+        height: 90vh; / Para pantallas medianas 90/
       }
     }
     @media (min-height: 901px) {
       iframe {
-        height: 150vh; / Para pantallas grandes95 */
+        height: 95vh; / Para pantallas grandes95 */
       }
     }
   </style>
