@@ -4,6 +4,7 @@ from streamlit.components.v1 import html
 # IMPORTANTE: st.set_page_config debe ser el primer comando de Streamlit
 st.set_page_config( 
    page_icon="🧊",
+   page_title="Shinobi Traders GexBot", 
    layout="wide", 
 )
 
