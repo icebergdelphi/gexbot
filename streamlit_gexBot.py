@@ -72,7 +72,7 @@ html_code = """
       width: 105vw; / Ocupa todo el ancho del viewport /
       margin: 0;
       padding: 0;
-      height: 70%; / Altura dinámicamente ajustada al viewport 100/
+      height: 50%; / Altura dinámicamente ajustada al viewport 100/
     }
     iframe {
       width: 100vw; / Ocupa todo el ancho del viewport /
