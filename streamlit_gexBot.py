@@ -8,18 +8,6 @@ st.set_page_config(
    page_title="Shinobi Traders GexBot", 
    layout="wide", 
 )
-'''
-def get_user_ip():
-    try:
-        ip = requests.get("https://api64.ipify.org?format=json").json()["ip"]
-        return ip
-    except:
-        return "No IP detected"
-
-user_ip = get_user_ip()
-st.write(f"Tu dirección IP: {user_ip}")#
-
-'''
 
 # Combinando todos los estilos en un solo bloque
 combined_style = """
