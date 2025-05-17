@@ -63,7 +63,6 @@ html_code = """
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GexBot Embed</title>
   <style>
     html, body {
       margin: 0;
@@ -78,14 +77,14 @@ html_code = """
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 0vh;
       height: 100vh;
       overflow: hidden;
     }
     
     iframe {
       width: 100%;
-      height: 130vh; /* Altura extra para mostrar todo el contenido */
+      height: 100vh; /* Altura extra para mostrar todo el contenido */
       border: none;
       transform-origin: top center;
       transform: scale(1);
