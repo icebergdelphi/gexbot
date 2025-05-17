@@ -69,7 +69,7 @@ html_code = """
       height: 100%; / 100 /
     }
     .iframe-container {
-      width: 105vw; / Ocupa todo el ancho del viewport /
+      width: 50vw; / Ocupa todo el ancho del viewport 105/
       margin: 0;
       padding: 0;
       height: 50%; / Altura dinámicamente ajustada al viewport 100/
