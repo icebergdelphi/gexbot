@@ -96,7 +96,7 @@ html_code = """
     }
     @media (min-height: 901px) {
       iframe {
-        height: 95vh; / Para pantallas grandes95 */
+        height: 760px; / Para pantallas grandes95vh */
       }
     }
   </style>
