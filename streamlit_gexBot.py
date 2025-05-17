@@ -94,7 +94,7 @@ html_code = """
       /* Pantallas muy grandes (21" o más) */
       iframe {
         height: 105vh;
-        transform: scale(0.95);
+        transform: scale(0.97);
       }
     }
   </style>
