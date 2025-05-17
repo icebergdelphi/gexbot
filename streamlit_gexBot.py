@@ -89,7 +89,7 @@ html_code = """
     }
     @media (min-height: 769px) and (max-height: 900px) {
       iframe {
-        height: 150vh; / Para pantallas medianas 90/
+        height: 200vh; / Para pantallas medianas 90/
       }
     }
     @media (min-height: 901px) {
