@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit.components.v1 import html
-import requests
+#import requests
 
 # IMPORTANTE: st.set_page_config debe ser el primer comando de Streamlit
 st.set_page_config( 
@@ -18,6 +18,7 @@ def get_user_ip():
 
 user_ip = get_user_ip()
 st.write(f"Tu dirección IP: {user_ip}")#
+
 """
 
 # Combinando todos los estilos en un solo bloque
