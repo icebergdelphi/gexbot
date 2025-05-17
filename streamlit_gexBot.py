@@ -5,6 +5,7 @@ st.set_page_config(
    page_title="Shinobi Traders GexBot",
    layout="centered",
    page_icon="🧊",
+   layout="wide",
   
 )
 # Combinando todos los estilos en un solo bloque
