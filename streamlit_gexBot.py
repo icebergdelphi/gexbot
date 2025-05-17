@@ -66,7 +66,7 @@ html_code = """
       margin: 0;
       padding: 0;
       overflow: hidden; / Evita barras de desplazamiento /
-      height: 100%;
+      height: 90%; / 100 /
     }
     .iframe-container {
       width: 105vw; / Ocupa todo el ancho del viewport /
